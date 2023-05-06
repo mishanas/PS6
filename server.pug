@@ -1,0 +1,18 @@
+html
+  head
+    title Hotels Metadata
+    script(src='/path/to/server.js')
+  body
+    h1 Hotels Metadata
+    ul
+      each hotel in hotels
+        li
+          h2= hotel.name
+          p= 'Person Name: ' + hotel.posName
+          h = 'hotel location: ' + hotel.hcomLocale
+          form(action="/" method="post")
+          label(for="searchQuery") Search:
+          input(type="text" id="searchQuery" name="searchQuery")
+         button(type="submit") Submit
+
+
